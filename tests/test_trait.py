@@ -1,6 +1,6 @@
 import math
 
-from python_trait import Trait, register_trait, trait_impl_pool, trait_to
+from python_trait import Trait, register_trait, trait_to, trait_impl_pool
 
 
 class NumberPair:
