@@ -18,6 +18,10 @@ class Trait(typing.Generic[T]):
     def __call__(self, obj) -> T:
         return self.trait_for(obj)
 
+    @classmethod
+    def has_trait(cls, obj) -> bool:
+        return (type(obj), cls) in trait_impl_pool
+
 
 def register_trait(origin_cls, trait_cls):
     def impl(trait_impl):
