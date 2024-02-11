@@ -48,9 +48,8 @@ class AABBAsLine(AsLine):
 
 
 def test_register_trait():
-    assert len(trait_impl_pool) == 2
-    assert trait_impl_pool[NumberPair, AsLine] == NumberPairAsLine
-    assert trait_impl_pool[AABB, AsLine] == AABBAsLine
+    assert trait_impl_pool[AsLine][NumberPair] == NumberPairAsLine
+    assert trait_impl_pool[AsLine][AABB] == AABBAsLine
 
 
 def test_as_line_traits():
